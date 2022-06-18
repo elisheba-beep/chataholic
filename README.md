@@ -1,16 +1,13 @@
 # chataholic
 
-A new Flutter application.
+A Flutter chat application.
 
-## Getting Started
+## About
 
-This project is a starting point for a Flutter application.
+This project is a chat application made using Flutter and Firebase.
 
-A few resources to get you started if this is your first Flutter project:
+It is a group based chat application where you can chat with whoever is available at that time.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+It is a good starting point for a large chat application. Th eauthemtication is done with firebase using just an email and a password.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
