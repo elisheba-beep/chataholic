@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-final _firestore = Firestore.instance;
-FirebaseUser loggedInUser;
+final _firestore = FirebaseFirestore.instance;
+User loggedInUser;
 
 class ChatScreen extends StatefulWidget {
   @override
@@ -26,7 +26,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   void getCurrentUser() async {
     try {
-      final user = await _auth.currentUser();
+      final user = await _auth.currentUser;
       if (user != null) {
         loggedInUser = user;
       }
@@ -37,7 +37,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   void messagesStream() async {
     await for (var snapshot in _firestore.collection('messages').snapshots()) {
-      for (var message in snapshot.documents) {
+      for (var message in snapshot.docs) {
         print(message.data);
       }
     }
@@ -119,11 +119,11 @@ class MessagesStream extends StatelessWidget {
       // ignore: missing_return
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          final messages = snapshot.data.documents;
+          final messages = snapshot.data.docs;
           List<MessageBubble> messageBubbles = [];
           for (var message in messages) {
-            final messageText = message.data['text'];
-            final messageSender = message.data['sender'];
+            final messageText = message['text'];
+            final messageSender = message['sender'];
             final currentUser = loggedInUser.email;
 
             final messageBubble = MessageBubble(
