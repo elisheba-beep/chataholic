@@ -16,8 +16,9 @@ class Chataholic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme:
-          ThemeData.dark().copyWith(scaffoldBackgroundColor: Color(0xFF004aad)),
+          ThemeData.light().copyWith(scaffoldBackgroundColor: Color(0xFF6b969d)),
       initialRoute: '/',
       routes: {
         '/': (context) => WelcomeScreen(),

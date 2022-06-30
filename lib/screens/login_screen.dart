@@ -33,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   child: Image(
                     image: AssetImage(
-                      'images/logoo.png',
+                      'images/logo1.png',
                     ),
                     fit: BoxFit.cover,
                   ),
@@ -42,6 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             SizedBox(height: 10.0),
             TextField(
+              cursorColor: Color(0xff2a2f3c),
                 textAlign: TextAlign.center,
                 keyboardType: TextInputType.emailAddress,
                 onChanged: (value) {
@@ -51,6 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     kTextBoxDecoration.copyWith(hintText: 'Enter your email')),
             SizedBox(height: 10.0),
             TextField(
+               cursorColor: Color(0xff2a2f3c),
               obscureText: true,
               textAlign: TextAlign.center,
               onChanged: (value) {
@@ -60,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   kTextBoxDecoration.copyWith(hintText: 'Enter your password'),
             ),
             RoundedButton(
-              colour: Colors.black87,
+              colour: Color(0xff2a2f3c),
               title: 'Log in',
               onPressed: () async {
                 try {

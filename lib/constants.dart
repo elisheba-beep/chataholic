@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 const kTextStyle = TextStyle(
     fontFamily: 'Pacifico',
     fontWeight: FontWeight.bold,
-    color: Colors.black,
+    color: Color(0xffeceae3),
     fontSize: 30.0);
 const kTextBoxDecoration = InputDecoration(
   contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
@@ -12,10 +12,10 @@ const kTextBoxDecoration = InputDecoration(
     borderRadius: BorderRadius.all(
       (Radius.circular(30.0)),
     ),
-    borderSide: BorderSide(color: Colors.black54),
+    borderSide: BorderSide(color: Color(0xff2a2f3c)),
   ),
-  enabledBorder: OutlineInputBorder(
-    borderSide: BorderSide(color: Colors.black87, width: 1.0),
+  focusedBorder: OutlineInputBorder(
+    borderSide: BorderSide(color: Color(0xff2a2f3c), width: 1.0),
     borderRadius: BorderRadius.all(
       (Radius.circular(30.0)),
     ),
@@ -24,12 +24,12 @@ const kTextBoxDecoration = InputDecoration(
     borderRadius: BorderRadius.all(
       (Radius.circular(30.0)),
     ),
-    borderSide: BorderSide(color: Colors.black87, width: 2.0),
+    borderSide: BorderSide(color: Color(0xff2a2f3c), width: 2.0),
   ),
 );
 const kMessageContainerDecoration = BoxDecoration(
   border: Border(
-    top: BorderSide(color: Colors.black54, width: 2.0),
+    top: BorderSide(color: Color(0xffaed3d8), width: 2.0),
   ),
 );
 const kMessageTextFieldDecoration = InputDecoration(
@@ -38,4 +38,4 @@ const kMessageTextFieldDecoration = InputDecoration(
   hintText: 'Type your message',
 );
 const kSendTextStyle = TextStyle(
-    color: Colors.black54, fontSize: 18.0, fontWeight: FontWeight.bold);
+    color: Color(0xff2a2f3c), fontSize: 18.0, fontWeight: FontWeight.bold);

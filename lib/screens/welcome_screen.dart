@@ -24,7 +24,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   child: CircleAvatar(
                     backgroundColor: Colors.transparent,
                     backgroundImage: AssetImage(
-                      'images/logo.png',
+                      'images/logo01.png',
                     ),
                   ),
                 ),
@@ -33,20 +33,20 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   style: TextStyle(
                       fontFamily: 'Pacifico',
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Color(0xff2a2f3c),
                       fontSize: 30.0),
                 ),
               ],
             ),
             RoundedButton(
-              colour: Colors.black,
+              colour: Color(0xff2a2f3c),
               title: 'Log in',
               onPressed: () {
                 Navigator.pushNamed(context, '/third');
               },
             ),
             RoundedButton(
-              colour: Colors.black87,
+              colour: Color(0xff2a2f3c),
               title: 'Register',
               onPressed: () {
                 Navigator.pushNamed(context, '/second');

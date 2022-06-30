@@ -26,7 +26,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   void getCurrentUser() async {
     try {
-      final user = await _auth.currentUser;
+      final user = _auth.currentUser;
       if (user != null) {
         loggedInUser = user;
       }
@@ -47,7 +47,9 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue[900],
+        elevation: 0,
+        centerTitle: true,
+        backgroundColor: Color(0xff6b969d),
         leading: null,
         actions: <Widget>[
           IconButton(
@@ -77,6 +79,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 children: <Widget>[
                   Expanded(
                     child: TextField(
+                      cursorColor: Color(0xff2a2f3c),
                       controller: messageTextController,
                       onChanged: (value) {
                         messageText = value;
@@ -84,7 +87,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       decoration: kMessageTextFieldDecoration,
                     ),
                   ),
-                  FlatButton(
+                  TextButton(
                     onPressed: () {
                       messageTextController.clear();
                       _firestore.collection('messages').add({
@@ -163,7 +166,7 @@ class MessageBubble extends StatelessWidget {
             sender,
             style: TextStyle(
                 fontSize: 12.0,
-                color: Colors.black,
+                color: isMe ? Color(0xff2a2f3c) : Color(0xffeceae3),
                 fontWeight: FontWeight.bold),
           ),
           Material(
@@ -179,13 +182,14 @@ class MessageBubble extends StatelessWidget {
                       bottomLeft: Radius.circular(30.0),
                       bottomRight: Radius.circular(30.0),
                     ),
-              color: isMe ? Colors.black : Colors.blue,
+              color: isMe ? Color(0xff2a2f3c) : Color(0xffaed3d8),
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 child: Text(
                   '$text',
                   style: TextStyle(
                     fontSize: 15.0,
+                    color: isMe ? Color(0xffeceae3) : Color(0xff2a2f3c),
                   ),
                 ),
               )),
