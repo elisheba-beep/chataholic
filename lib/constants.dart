@@ -5,6 +5,8 @@ const kTextStyle = TextStyle(
     fontWeight: FontWeight.bold,
     color: Color(0xffeceae3),
     fontSize: 30.0);
+
+
 const kTextBoxDecoration = InputDecoration(
   contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
   hintText: '',
@@ -27,6 +29,8 @@ const kTextBoxDecoration = InputDecoration(
     borderSide: BorderSide(color: Color(0xff2a2f3c), width: 2.0),
   ),
 );
+
+
 const kMessageContainerDecoration = BoxDecoration(
   border: Border(
     top: BorderSide(color: Color(0xffaed3d8), width: 2.0),
